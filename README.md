@@ -1,3 +1,5 @@
+![GitHub all releases](https://img.shields.io/github/downloads/ABKAM2023/cs2-weapon-onlyhs/total?style=for-the-badge)
+
 ## RU
 **Weapon OnlyHS** - делает указанные в конфиге виды оружия "только хедшот": урон засчитывается **только при попадании в голову**, любые другие попадания этим оружием мгновенно откатываются (HP/броня восстанавливаются).
 
