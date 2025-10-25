@@ -1,5 +1,5 @@
 ## RU
-**Weapon_OnlyHS** - делает указанные в конфиге виды оружия "только хедшот": урон засчитывается **только при попадании в голову**, любые другие попадания этим оружием мгновенно откатываются (HP/броня восстанавливаются).
+**Weapon OnlyHS** - делает указанные в конфиге виды оружия "только хедшот": урон засчитывается **только при попадании в голову**, любые другие попадания этим оружием мгновенно откатываются (HP/броня восстанавливаются).
 
 ## Требования
 * [Utils](https://github.com/Pisex/cs2-menus/releases)
@@ -30,7 +30,7 @@
 ```
 
 ## EN
-**Weapon_OnlyHS** - makes selected weapons **headshot-only**: damage is counted **only** on headshots; any other hits from those weapons are instantly reverted (HP/armor restored).
+**Weapon OnlyHS** - makes selected weapons **headshot-only**: damage is counted **only** on headshots; any other hits from those weapons are instantly reverted (HP/armor restored).
 
 ## Requirements
 * [Utils](https://github.com/Pisex/cs2-menus/releases)
