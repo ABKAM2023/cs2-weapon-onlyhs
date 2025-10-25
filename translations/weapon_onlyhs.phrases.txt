@@ -1,0 +1,8 @@
+"Phrases"
+{
+	"Center_Weapon_OnlyHS_Hint"
+	{
+		"ru"  "Данное оружия наносит урон только в голову"
+		"en"  "This weapon deals damage to head only"
+	}
+}
