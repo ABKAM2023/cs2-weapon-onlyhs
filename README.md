@@ -30,7 +30,6 @@
 ```
 
 ## EN
-
 **Weapon_OnlyHS** - makes selected weapons **headshot-only**: damage is counted **only** on headshots; any other hits from those weapons are instantly reverted (HP/armor restored).
 
 ## Requirements
