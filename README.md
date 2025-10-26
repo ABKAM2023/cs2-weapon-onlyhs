@@ -17,16 +17,42 @@
 	"center_hint_cooldown"   "2.0"
 
 	// Список оружий: 1 — только хедшот, 0 — обычный урон
-	// Ключи — имена оружия из game events (без префикса `weapon_`, регистр не важен).
-	// Допускается и форма "weapon_deagle" — префикс будет отброшен.
 	"weapons"
 	{
-		"deagle"         "1"
-		"ak47"           "1"
-		"m4a1"           "0"
-		"awp"            "0"
-		"glock"          "0"
-		"usp_silencer"   "0"
+		"deagle"   "1"
+		"ak47"     "1"
+		"m4a1"     "0"
+		"awp"      "0"
+		"glock"    "0"
+		"usp_silencer" "0"
+	}
+
+	// Переопределения по конкретным картам
+	"maps"
+	{
+		"de_mirage"
+		{
+			// Наследовать глобальные + применить правки
+			"inherit" "1"
+
+			// Вариант 1: через вложенную секцию
+			"weapons"
+			{
+				"ak47"   "1"  // добавить/оставить HS-only
+				"deagle" "0"  // на mirage дигл без ограничения
+				"famas"  "1"
+			}
+		}
+
+		"de_dust2"
+		{
+			// Вариант 2: сразу ключи (без "weapons")
+			"inherit" "0"  // НЕ наследуем глобальные - только то, что ниже
+
+			"deagle" "1"
+			"awp"    "1"
+			"glock"    "1"				
+		}
 	}
 }
 ```
@@ -41,15 +67,13 @@
 ```ini
 "Weapon_OnlyHS"
 {
-	// Console debug logs
+	// Debug logs to console
 	"debug_log"              "0"
 
-	// Anti-spam for PrintToCenter (sec) for the attacker
+	// Anti-spam for PrintToCenter (seconds) applied to the attacker
 	"center_hint_cooldown"   "2.0"
 
-	// Weapon list: 1 — headshot-only, 0 — normal damage
-	// Keys are weapon names from game events (no `weapon_` prefix, case-insensitive).
-	// "weapon_deagle" is also accepted — the prefix will be stripped.
+	// Weapons list: 1 — headshot-only, 0 — normal damage
 	"weapons"
 	{
 		"deagle"         "1"
@@ -58,6 +82,34 @@
 		"awp"            "0"
 		"glock"          "0"
 		"usp_silencer"   "0"
+	}
+
+	// Per-map overrides
+	"maps"
+	{
+		"de_mirage"
+		{
+			// Inherit global settings + apply changes
+			"inherit" "1"
+
+			// Option 1: via nested "weapons" section
+			"weapons"
+			{
+				"ak47"   "1"  // add/keep HS-only
+				"deagle" "0"  // on Mirage, Deagle is unrestricted
+				"famas"  "1"
+			}
+		}
+
+		"de_dust2"
+		{
+			// Option 2: set keys directly (without "weapons")
+			"inherit" "0"  // Do NOT inherit globals — use only what's below
+
+			"deagle" "1"
+			"awp"    "1"
+			"glock"  "1"
+		}
 	}
 }
 ```
